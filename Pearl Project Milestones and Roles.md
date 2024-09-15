@@ -5,7 +5,7 @@
 ### Member 1: Daniela Flores
 - **Role:** Project Manager/Developer
 - **Tasks:**
-  - Homepage
+  - Homepage using Amazon S3
   - Oversee project progress
   - Facilitate smooth upload to AWS 
 
