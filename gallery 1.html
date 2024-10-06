@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Marina Apartments</title>
+    <style>
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar__container">
+            <img src="./images/Logo.png" alt="Apartment logo">
+            <a href="/" id="navbar__logo" style="color: white; text-decoration: none; font-size: 24px;">Marina Apartments</a>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <ul class="navbar__menu" id="navbar__menu">
+                <li class="navbar__item"><a href="/" class="navbar__links"> Home </a></li>
+                <li class="navbar__item"><a href="/floorPlan.html" class="navbar__links"> Floor Plans </a></li>
+                <li class="navbar__item"><a href="/" class="navbar__links"> Amenities </a></li>
+                <li class="navbar__item"><a href="/gallery.html" class="navbar__links"> Gallery </a></li>
+                <li class="navbar__item"><a href="/" class="navbar__links"> Neighborhood </a></li>
+                <li class="navbar__item"><a href="/" class="navbar__links"> Contact </a></li>
+                <li class="navbar__btn"><a href="/apply-now.html" class="button"> Apply </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1>Gallery</h1>
+    <div class="gallery">
+        <img src="./images/apartmentscenery.jpg" alt="apartment outside" onclick="openModal(this.src)">
+        <img src="./images/downtown.jpg" alt="downtown" onclick="openModal(this.src)">
+        <img src="./images/interior.jpg" alt="inside the apartment" onclick="openModal(this.src)">
+        <img src="./images/livingroom.jpg" alt="livingroom of the apartments" onclick="openModal(this.src)">
+        <img src="./images/photo5.jpg" alt="Gallery Image 5" onclick="openModal(this.src)">
+        <img src="./images/photo6.jpg" alt="Gallery Image 6" onclick="openModal(this.src)">
+        <!-- Add more images as needed -->
+    </div>
+    <div class="modal" id="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-img" src="" alt="Modal Image">
+    </div>
+
+    <script>
+        function openModal(src) {
+            document.getElementById("modal-img").src = src;
+            document.getElementById("modal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+
+        function toggleMenu() {
+            const menu = document.getElementById("navbar__menu");
+            menu.classList.toggle("show");
+        }
+    </script>
+
+</body>
+</html>
