@@ -1,0 +1,136 @@
+body {
+    font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #324939;
+    color: hsl(50, 22%, 55%);
+}
+
+header {
+    background-color: #f7f4f4;
+    color: #fcfdfc;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.toplogo {
+
+    height: 7%;
+    width: 12%;
+    margin-top: 3px;
+}
+
+nav {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f7f4;
+    justify-content: space-between;
+}
+
+nav a {
+    padding: 20px 30px;
+    display: block;
+    color: rgb(37, 51, 41);
+    text-align: center;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #777;
+}
+
+.link-group {
+    display: flex;
+    height: fit-content;
+    font-size: 22px;
+    padding: 10px 20px
+
+
+}
+
+/* .hero {
+    background-image: "Marina.png"
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+} */
+.banner {
+background-image: url("images/livingroom.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: 100% 100%;
+background-color: rgb(255, 255, 255, .3);
+background-blend-mode: lighten;
+width: 100vw;
+height: 500px;
+display: flex;
+/* flex-direction: column; */
+justify-content: space-between;
+}
+
+.top-left{
+    /* position: relative; */
+    font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif; 
+    font-size: 70px;
+    color: #ffffff;
+    text-align: left;
+    padding: 10px 20px;
+    text-shadow: 2px 2px 4px #000000;
+    width: 40vw;
+    /* margin-right: auto; */
+}
+.top-right{
+    font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif; 
+    font-size: 30px;
+    color: #ffffff;
+    text-align: left;
+    padding: 10px 20px;
+    text-shadow: 2px 2px 4px #020403;
+    width: 70vw;
+    /* justify-content: right; */
+    /* margin-left: auto; */
+}
+.hero h2 {
+    font-size: 36px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+}
+
+
+.wrapper {
+    font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif; 
+    font-size: 18px;
+    color: #ffffff;
+    text-align: left;
+    padding: 10px 20px;
+    text-shadow: 2px 2px 4px #020403;
+    width: 60vw;
+    align-items: center;
+    display: flex;
+    width: 100%;
+
+}
+.content-left {
+    font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif; 
+    font-size: 20px;
+    color: #ffffff;
+    text-align: left;
+    padding: 5px 10px;
+    text-shadow: 2px 2px 4px #000000;
+    width: 80vw;
+}
+.stock-img{
+    float: right;
+    width: 30vw;
+    display: flex;
+}
